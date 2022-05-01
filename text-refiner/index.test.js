@@ -6,3 +6,12 @@ test("연속된 2개의 공백이 중복을 없애서 -> 하나의 공백으로 
   const actual = sut("hello  world");
   expect(actual).toBe("hello world");
 });
+test('4개의 공백이 -> 하나의 공백으로 나오는지를 테스트', () => {
+  const actual = sut("hello    world");
+  expect(actual).toBe("hello world");
+})
+test('3개의 공백이 -> 하나의 공백으로 나오는지를 테스트', () => {
+  const actual = sut("hello   world");
+  expect(actual).toBe("hello world");
+})
+
